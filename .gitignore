@@ -1,0 +1,46 @@
+# Xcode
+build/*
+.build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+.DS_Store
+
+# Generated screenshots
+_framed.png
+
+# Downloadable Resources
+Resources/OnDemandResources/chapters
+Resources/webview
+ZIP_DATA_DELETABLE
+
+# For Cocoapods
+Pods/
+Pods/
+
+# For Fastlane
+Preview.html
+fastlane/README.md
+fastlane/report.xml
+*.ipa
+*.app.dSYM.zip
+fastlane/DSYMS_TEMP/
+.mobileprovision
+
+# For Snapshots
+Snapshots/
+
+# vim
+*.swp
+*.un~
+*.blob
