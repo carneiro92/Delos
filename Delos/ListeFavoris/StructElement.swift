@@ -11,6 +11,8 @@ import Foundation
 struct StructElement: Identifiable {
     var id = UUID()
     var image: String
-    var salleDescription: String
-    var sallePrix: Int
+    var descriptionSalle: String
+    var prixSalle: Int
+    var nomSalle: String
+    var ville: String
 }

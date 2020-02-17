@@ -10,10 +10,10 @@ import Foundation
 
 struct Service{
     static let listData: [StructElement] = [
-        StructElement(image: Constants.ImageNames.image1, salleDescription: "Brieve description de la salle 1", sallePrix: 47),
-        StructElement(image: Constants.ImageNames.image2, salleDescription: "Brieve description de la salle 2", sallePrix: 38),
-        StructElement(image: Constants.ImageNames.image3, salleDescription: "Brieve description de la salle 3", sallePrix: 55),
-        StructElement(image: Constants.ImageNames.image4, salleDescription: "Brieve description de la salle 4", sallePrix: 60),
-        StructElement(image: Constants.ImageNames.image5, salleDescription: "Brieve description de la salle 5", sallePrix: 40),
-        StructElement(image: Constants.ImageNames.image6, salleDescription: "Brieve description de la salle 6", sallePrix: 35)]
+        StructElement(image: Constants.ImageNames.image1, descriptionSalle: "Brieve description de la salle 1", prixSalle: 47, nomSalle: "Salle du lac", ville: "Lyon"),
+        StructElement(image: Constants.ImageNames.image2, descriptionSalle: "Brieve description de la salle 2", prixSalle: 38, nomSalle: "Salle communale de venissieux", ville: "Venissieux"),
+        StructElement(image: Constants.ImageNames.image3, descriptionSalle: "Brieve description de la salle 3", prixSalle: 55, nomSalle: "Grand Opera", ville: "Lyon"),
+        StructElement(image: Constants.ImageNames.image4, descriptionSalle: "Brieve description de la salle 4", prixSalle: 60, nomSalle: "Chez ricky", ville: "Villeurbanne"),
+        StructElement(image: Constants.ImageNames.image5, descriptionSalle: "Brieve description de la salle 5", prixSalle: 40, nomSalle: "College Saint Luc", ville: "Lyon"),
+        StructElement(image: Constants.ImageNames.image6, descriptionSalle: "Brieve description de la salle 6", prixSalle: 35, nomSalle: "Cabanon de chez Eric", ville: "Lyon")]
 }

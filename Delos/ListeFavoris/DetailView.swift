@@ -15,9 +15,17 @@ struct DetailView: View {
        var body: some View {
            ScrollView {
                VStack {
-                   Image(item.image).resizable().frame(width:120, height: 120)
-                   Text(item.salleDescription)
+                    Text(item.nomSalle)
+                    Image(item.image).resizable().frame(width:120, height: 120)
+                    Text(item.descriptionSalle)
                    }
                    }
                }
            }
+
+
+struct DetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailView(item: Service.listData[0])
+    }
+}
