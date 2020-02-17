@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct Favoris: View {
+struct FavorisView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct Favoris_Previews: PreviewProvider {
+struct FavorisView_Previews: PreviewProvider {
     static var previews: some View {
-        Favoris()
+        FavorisView()
     }
 }
