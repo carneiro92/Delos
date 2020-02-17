@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */; };
+		0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D24E8E423FAD8CD00BEAC92 /* MapView.swift */; };
 		0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */; };
 		0DA0D95023FAC66F003CE5CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0D94F23FAC66F003CE5CB /* SceneDelegate.swift */; };
 		0DA0D95223FAC66F003CE5CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0D95123FAC66F003CE5CB /* ContentView.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0D24E8E423FAD8CD00BEAC92 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0DA0D94A23FAC66F003CE5CB /* Delos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA0D94F23FAC66F003CE5CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				EE9705C323FACF3200049300 /* FavorisView.swift */,
+				0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */,
+				0D24E8E423FAD8CD00BEAC92 /* MapView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,7 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */,
+				0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */,
 				0DA0D95023FAC66F003CE5CB /* SceneDelegate.swift in Sources */,
+				0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */,
 				EE9705C423FACF3200049300 /* FavorisView.swift in Sources */,
 				0DA0D95223FAC66F003CE5CB /* ContentView.swift in Sources */,
 			);

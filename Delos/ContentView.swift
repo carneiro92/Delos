@@ -11,7 +11,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("map")
+            MapView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Accueil")
@@ -21,7 +21,7 @@ struct ContentView: View {
                     Image(systemName: "star")
                     Text("Favoris")
                 }
-            Text("profile")
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.circle")
                     Text("Profile")
