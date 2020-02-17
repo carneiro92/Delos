@@ -56,6 +56,7 @@
 		0DA0D94C23FAC66F003CE5CB /* Delos */ = {
 			isa = PBXGroup;
 			children = (
+				EE9705C223FACCE000049300 /* Views */,
 				0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */,
 				0DA0D94F23FAC66F003CE5CB /* SceneDelegate.swift */,
 				0DA0D95123FAC66F003CE5CB /* ContentView.swift */,
@@ -73,6 +74,13 @@
 				0DA0D95623FAC670003CE5CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE9705C223FACCE000049300 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
