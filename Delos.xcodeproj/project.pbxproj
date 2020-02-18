@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		8D849178BB2B8BA473AC45DA /* Pods_Delos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C49A938D31D983AA0A4865 /* Pods_Delos.framework */; };
 		9B8B8A6823FADB620023A132 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A6723FADB620023A132 /* ReservationView.swift */; };
 		9B8B8A6A23FADEE80023A132 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B8A6923FADEE80023A132 /* GoogleService-Info.plist */; };
+		9B8B8A6F23FBE1A60023A132 /* SendUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */; };
+		9B8B8A7223FBE2D50023A132 /* CodableAsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */; };
 		EE9705C423FACF3200049300 /* FavorisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9705C323FACF3200049300 /* FavorisView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		9B8B8A6723FADB620023A132 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
 		9B8B8A6923FADEE80023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B8B8A6B23FADEEB0023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendUserService.swift; sourceTree = "<group>"; };
+		9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableAsDictionary.swift; sourceTree = "<group>"; };
 		EE9705C323FACF3200049300 /* FavorisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisView.swift; sourceTree = "<group>"; };
 		FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.release.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +78,8 @@
 		0DA0D94C23FAC66F003CE5CB /* Delos */ = {
 			isa = PBXGroup;
 			children = (
+				9B8B8A7323FBEC240023A132 /* Reservation */,
+				9B8B8A7023FBE2AF0023A132 /* Extensions */,
 				9B8B8A6923FADEE80023A132 /* GoogleService-Info.plist */,
 				EE9705C223FACCE000049300 /* Views */,
 				0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */,
@@ -104,13 +110,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9B8B8A7023FBE2AF0023A132 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B8B8A7323FBEC240023A132 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				9B8B8A6723FADB620023A132 /* ReservationView.swift */,
+				9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
 		CE737D3A66FA6BAC14EB1DC5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				3476055AF005933A0014A59E /* Pods-Delos.debug.xcconfig */,
 				FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -120,7 +142,6 @@
 				EE9705C323FACF3200049300 /* FavorisView.swift */,
 				0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */,
 				0D24E8E423FAD8CD00BEAC92 /* MapView.swift */,
-				9B8B8A6723FADB620023A132 /* ReservationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */,
+				9B8B8A7223FBE2D50023A132 /* CodableAsDictionary.swift in Sources */,
 				0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */,
+				9B8B8A6F23FBE1A60023A132 /* SendUserService.swift in Sources */,
 				9B8B8A6823FADB620023A132 /* ReservationView.swift in Sources */,
 				0DA0D95023FAC66F003CE5CB /* SceneDelegate.swift in Sources */,
 				0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */,
