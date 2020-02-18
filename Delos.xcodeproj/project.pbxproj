@@ -47,12 +47,12 @@
 		9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendUserService.swift; sourceTree = "<group>"; };
 		9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableAsDictionary.swift; sourceTree = "<group>"; };
 		EE9705C323FACF3200049300 /* FavorisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisView.swift; sourceTree = "<group>"; };
-		FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.release.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.release.xcconfig"; sourceTree = "<group>"; };
 		EEBDB3E323FADDB600F9A3FA /* StructElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructElement.swift; sourceTree = "<group>"; };
 		EEBDB3E523FAE34100F9A3FA /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		EEBDB3E723FAE38E00F9A3FA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		EEBDB3E923FAE3B200F9A3FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EEBDB3EB23FAE71A00F9A3FA /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.release.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 				0DA0D94623FAC66F003CE5CB /* Sources */,
 				0DA0D94723FAC66F003CE5CB /* Frameworks */,
 				0DA0D94823FAC66F003CE5CB /* Resources */,
-				224B660D948BD59B8EFC302E /* [CP] Embed Pods Frameworks */,
+				3E66928E1FB95B273E6536CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,7 +239,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		224B660D948BD59B8EFC302E /* [CP] Embed Pods Frameworks */ = {
+		3E66928E1FB95B273E6536CC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
