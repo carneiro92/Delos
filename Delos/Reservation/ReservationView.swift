@@ -27,15 +27,9 @@ struct ReservationView: View {
             }
             Button("Charger", action: {
                 SendUser(Firstname: self.firstName, LastName: self.lastName, PhoneNumber: self.phoneNumber, Mail: self.mail, Age: self.age)
-                self.lastName = ""
-                self.firstName = ""
-                self.age = ""
-                self.mail = ""
-                self.phoneNumber = ""
-                self.showingAlert = true
-            
-            )
-        }
+                GetUser()
+
+            })
     }
 }
 
@@ -44,4 +38,5 @@ struct ReservationView_Previews: PreviewProvider {
     static var previews: some View {
         ReservationView()
     }
+}
 }
