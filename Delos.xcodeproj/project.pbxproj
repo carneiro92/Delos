@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		0DA0D95423FAC670003CE5CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA0D95323FAC670003CE5CB /* Assets.xcassets */; };
 		0DA0D95723FAC670003CE5CB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA0D95623FAC670003CE5CB /* Preview Assets.xcassets */; };
 		0DA0D95A23FAC670003CE5CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA0D95823FAC670003CE5CB /* LaunchScreen.storyboard */; };
+		8D849178BB2B8BA473AC45DA /* Pods_Delos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27C49A938D31D983AA0A4865 /* Pods_Delos.framework */; };
+		9B8B8A6823FADB620023A132 /* ReservationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A6723FADB620023A132 /* ReservationView.swift */; };
+		9B8B8A6A23FADEE80023A132 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B8A6923FADEE80023A132 /* GoogleService-Info.plist */; };
+		9B8B8A6F23FBE1A60023A132 /* SendUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */; };
+		9B8B8A7223FBE2D50023A132 /* CodableAsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */; };
 		EE9705C423FACF3200049300 /* FavorisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9705C323FACF3200049300 /* FavorisView.swift */; };
 		EEBDB3E423FADDB600F9A3FA /* StructElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDB3E323FADDB600F9A3FA /* StructElement.swift */; };
 		EEBDB3E623FAE34100F9A3FA /* ElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBDB3E523FAE34100F9A3FA /* ElementView.swift */; };
@@ -34,7 +39,15 @@
 		0DA0D95623FAC670003CE5CB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0DA0D95923FAC670003CE5CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA0D95B23FAC670003CE5CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C49A938D31D983AA0A4865 /* Pods_Delos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Delos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3476055AF005933A0014A59E /* Pods-Delos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.debug.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.debug.xcconfig"; sourceTree = "<group>"; };
+		9B8B8A6723FADB620023A132 /* ReservationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationView.swift; sourceTree = "<group>"; };
+		9B8B8A6923FADEE80023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B8B8A6B23FADEEB0023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendUserService.swift; sourceTree = "<group>"; };
+		9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableAsDictionary.swift; sourceTree = "<group>"; };
 		EE9705C323FACF3200049300 /* FavorisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisView.swift; sourceTree = "<group>"; };
+		FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.release.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.release.xcconfig"; sourceTree = "<group>"; };
 		EEBDB3E323FADDB600F9A3FA /* StructElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructElement.swift; sourceTree = "<group>"; };
 		EEBDB3E523FAE34100F9A3FA /* ElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementView.swift; sourceTree = "<group>"; };
 		EEBDB3E723FAE38E00F9A3FA /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D849178BB2B8BA473AC45DA /* Pods_Delos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +72,8 @@
 			children = (
 				0DA0D94C23FAC66F003CE5CB /* Delos */,
 				0DA0D94B23FAC66F003CE5CB /* Products */,
+				CE737D3A66FA6BAC14EB1DC5 /* Pods */,
+				5BD8A5BD27E505F1018E0CF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,11 +88,15 @@
 		0DA0D94C23FAC66F003CE5CB /* Delos */ = {
 			isa = PBXGroup;
 			children = (
+				9B8B8A7323FBEC240023A132 /* Reservation */,
+				9B8B8A7023FBE2AF0023A132 /* Extensions */,
+				9B8B8A6923FADEE80023A132 /* GoogleService-Info.plist */,
 				EEBDB3E223FADD9200F9A3FA /* ListeFavoris */,
 				EE9705C223FACCE000049300 /* Views */,
 				0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */,
 				0DA0D94F23FAC66F003CE5CB /* SceneDelegate.swift */,
 				0DA0D95123FAC66F003CE5CB /* ContentView.swift */,
+				9B8B8A6B23FADEEB0023A132 /* GoogleService-Info.plist */,
 				0DA0D95323FAC670003CE5CB /* Assets.xcassets */,
 				0DA0D95823FAC670003CE5CB /* LaunchScreen.storyboard */,
 				0DA0D95B23FAC670003CE5CB /* Info.plist */,
@@ -91,6 +111,40 @@
 				0DA0D95623FAC670003CE5CB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5BD8A5BD27E505F1018E0CF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27C49A938D31D983AA0A4865 /* Pods_Delos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B8B8A7023FBE2AF0023A132 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9B8B8A7323FBEC240023A132 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				9B8B8A6723FADB620023A132 /* ReservationView.swift */,
+				9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
+		CE737D3A66FA6BAC14EB1DC5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3476055AF005933A0014A59E /* Pods-Delos.debug.xcconfig */,
+				FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		EE9705C223FACCE000049300 /* Views */ = {
@@ -122,9 +176,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DA0D95E23FAC670003CE5CB /* Build configuration list for PBXNativeTarget "Delos" */;
 			buildPhases = (
+				DB29D550C49D7A460CCB9B69 /* [CP] Check Pods Manifest.lock */,
 				0DA0D94623FAC66F003CE5CB /* Sources */,
 				0DA0D94723FAC66F003CE5CB /* Frameworks */,
 				0DA0D94823FAC66F003CE5CB /* Resources */,
+				224B660D948BD59B8EFC302E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA0D95A23FAC670003CE5CB /* LaunchScreen.storyboard in Resources */,
+				9B8B8A6A23FADEE80023A132 /* GoogleService-Info.plist in Resources */,
 				0DA0D95723FAC670003CE5CB /* Preview Assets.xcassets in Resources */,
 				0DA0D95423FAC670003CE5CB /* Assets.xcassets in Resources */,
 			);
@@ -181,15 +238,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		224B660D948BD59B8EFC302E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delos/Pods-Delos-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Delos/Pods-Delos-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Delos/Pods-Delos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB29D550C49D7A460CCB9B69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Delos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DA0D94623FAC66F003CE5CB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */,
+				9B8B8A7223FBE2D50023A132 /* CodableAsDictionary.swift in Sources */,
 				EEBDB3E623FAE34100F9A3FA /* ElementView.swift in Sources */,
 				EEBDB3E423FADDB600F9A3FA /* StructElement.swift in Sources */,
 				0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */,
+				9B8B8A6F23FBE1A60023A132 /* SendUserService.swift in Sources */,
+				9B8B8A6823FADB620023A132 /* ReservationView.swift in Sources */,
 				0DA0D95023FAC66F003CE5CB /* SceneDelegate.swift in Sources */,
 				EEBDB3EC23FAE71A00F9A3FA /* DetailView.swift in Sources */,
 				EEBDB3EA23FAE3B200F9A3FA /* Constants.swift in Sources */,
@@ -330,6 +432,7 @@
 		};
 		0DA0D95F23FAC670003CE5CB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3476055AF005933A0014A59E /* Pods-Delos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -350,6 +453,7 @@
 		};
 		0DA0D96023FAC670003CE5CB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
