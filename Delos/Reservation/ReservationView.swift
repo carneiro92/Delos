@@ -3,7 +3,7 @@
 //  Delos
 //
 //  Created by Damien Cesar on 17/02/2020.
-//  Copyright © 2020 Carneiro Jorge. All rights reserved.
+//  Copyright ©️ 2020 Carneiro Jorge. All rights reserved.
 //
 
 import SwiftUI
@@ -27,15 +27,8 @@ struct ReservationView: View {
             }
             Button("Charger", action: {
                 SendUser(Firstname: self.firstName, LastName: self.lastName, PhoneNumber: self.phoneNumber, Mail: self.mail, Age: self.age)
-                self.lastName = ""
-                self.firstName = ""
-                self.age = ""
-                self.mail = ""
-                self.phoneNumber = ""
-                self.showingAlert = true
-            
-            )
-        }
+
+            })
     }
 }
 
@@ -44,4 +37,5 @@ struct ReservationView_Previews: PreviewProvider {
     static var previews: some View {
         ReservationView()
     }
+}
 }
