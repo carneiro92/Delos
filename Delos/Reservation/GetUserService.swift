@@ -10,24 +10,35 @@ import Foundation
 import Firebase
 
 
+
 var firstName: String = ""
 var lastName: String = ""
 var phoneNumber: String = ""
 var mail: String = ""
 var age: String = ""
 
-let docRef = db.collection("User")
-func GetUser(){
-    db.collection("User").getDocuments{ (querySnapshot, err) in
-        if let err = err {
-            print("Error getting documents: \(err)")
-        } else{
-            for document in querySnapshot!.documents {
-                print("\(document.data())")
-                }
-            }
+struct UserData:Identifiable, Decodable{
+    var id: String = ""
+    var firstName: String
+    var mail: String
+    var lastName: String
+    
+    
+}
+
+
+let docRefUser = db.collection("User")
+func GetUserData(completion: @escaping ([UserData]) -> Void ){
+    docRefUser.getDocuments{(snapshot, _)in
+        let documents = snapshot!.documents
+        var listUsers: [UserData] = []
+        documents.forEach{ document in
+            let infoUser: UserData = try! document.decoded()
+            listUsers.append(infoUser)
         }
+        completion(listUsers)
     }
+}
 
 
 

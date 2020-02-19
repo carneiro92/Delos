@@ -13,23 +13,23 @@ import Firebase
 
 struct ReservationView: View {
     @State var firstName = ""
-   @State var lastName = ""
-   @State var age =  ""
-   @State var mail = ""
-   @State var phoneNumber = ""
+    @State var lastName = ""
+    @State var age =  ""
+    @State var mail = ""
+    @State var phoneNumber = ""
     @State var showingAlert = false
-   var body: some View {
+    var body: some View {
         VStack{
-            Form{
-                TextField("Nom", text: $lastName)
-                TextField("Prénom", text: $firstName)
-                TextField("Âge", text: $age)
-                TextField("Mail", text: $mail)
-                TextField("Numéro de téléphone", text: $phoneNumber)
-            }
+//            Form{
+//                TextField("Nom", text: $lastName)
+////                TextField("Prénom", text: $firstName)
+////                TextField("Âge", text: $age)
+////                TextField("Mail", text: $mail)
+////                TextField("Numéro de téléphone", text: $phoneNumber)
+//            }
             
             Button("Print", action: {
-                print(GetUser())
+                GetUserData{user in}
             })
             
             Button("Charger", action: {
@@ -43,7 +43,7 @@ struct ReservationView: View {
             }).alert(isPresented: $showingAlert){
                 Alert(title: Text("Merci"), message: Text("Vous êtes maintenant inscris"))
             }
-            }
+        }
     }
 }
 
