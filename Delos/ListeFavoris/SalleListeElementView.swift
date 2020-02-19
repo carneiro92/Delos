@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ElementView: View {
+struct SalleListeElementView: View {
     
     var item: StructSalle
         
