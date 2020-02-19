@@ -9,8 +9,21 @@
 import SwiftUI
 
 struct FavorisView: View {
+   @State var list: [StructSalle] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(list) { item in NavigationLink(destination: DetailView(item: item)){
+                    ElementView(item: item)
+                }
+            }
+            .navigationBarTitle("Mes favoris")
+            .onAppear {
+                getSalles() { salles in
+                    self.list = salles
+                }
+            }
+        }
     }
 }
 
