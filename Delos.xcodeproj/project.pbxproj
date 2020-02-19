@@ -22,6 +22,9 @@
 		9B8B8A7523FBF79A0023A132 /* GetUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7423FBF79A0023A132 /* GetUserService.swift */; };
 		9B8B8A7923FC34970023A132 /* ReservationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7823FC34970023A132 /* ReservationList.swift */; };
 		9B8B8A7F23FD35F30023A132 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */; };
+		9B8B8A8123FD46890023A132 /* SnapshotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */; };
+		9B8B8A8323FD50EB0023A132 /* ListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8223FD50EB0023A132 /* ListDataModel.swift */; };
+		9B8B8A8523FD87890023A132 /* UserDetaillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8423FD87890023A132 /* UserDetaillsView.swift */; };
 		EE9705C423FACF3200049300 /* FavorisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9705C323FACF3200049300 /* FavorisView.swift */; };
 		EEEDE8FE23FD38E900D87110 /* SalleListeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDE8FD23FD38E900D87110 /* SalleListeDetailView.swift */; };
 		EEEDE90023FD390B00D87110 /* SalleListeElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDE8FF23FD390B00D87110 /* SalleListeElementView.swift */; };
@@ -48,6 +51,9 @@
 		9B8B8A7423FBF79A0023A132 /* GetUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserService.swift; sourceTree = "<group>"; };
 		9B8B8A7823FC34970023A132 /* ReservationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationList.swift; sourceTree = "<group>"; };
 		9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotExtensions.swift; sourceTree = "<group>"; };
+		9B8B8A8223FD50EB0023A132 /* ListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataModel.swift; sourceTree = "<group>"; };
+		9B8B8A8423FD87890023A132 /* UserDetaillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetaillsView.swift; sourceTree = "<group>"; };
 		EE9705C323FACF3200049300 /* FavorisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisView.swift; sourceTree = "<group>"; };
 		EEEDE8FD23FD38E900D87110 /* SalleListeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalleListeDetailView.swift; sourceTree = "<group>"; };
 		EEEDE8FF23FD390B00D87110 /* SalleListeElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalleListeElementView.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */,
+				9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -136,6 +143,8 @@
 				9B8B8A6E23FBE1A60023A132 /* SendUserService.swift */,
 				9B8B8A7423FBF79A0023A132 /* GetUserService.swift */,
 				9B8B8A7823FC34970023A132 /* ReservationList.swift */,
+				9B8B8A8223FD50EB0023A132 /* ListDataModel.swift */,
+				9B8B8A8423FD87890023A132 /* UserDetaillsView.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -294,6 +303,9 @@
 				0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */,
 				9B8B8A6F23FBE1A60023A132 /* SendUserService.swift in Sources */,
 				9B8B8A6823FADB620023A132 /* ReservationView.swift in Sources */,
+				9B8B8A8523FD87890023A132 /* UserDetaillsView.swift in Sources */,
+				9B8B8A8123FD46890023A132 /* SnapshotExtensions.swift in Sources */,
+				9B8B8A8323FD50EB0023A132 /* ListDataModel.swift in Sources */,
 				EEEDE8FE23FD38E900D87110 /* SalleListeDetailView.swift in Sources */,
 				0DA0D95023FAC66F003CE5CB /* SceneDelegate.swift in Sources */,
 				0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */,

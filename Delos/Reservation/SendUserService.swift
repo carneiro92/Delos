@@ -9,7 +9,7 @@
 import Foundation
 import Firebase
 
-public struct User: Codable {
+public struct SendDataUser:Codable {
     let firstName: String
     let lastName: String
     let phoneNumber: String
@@ -24,7 +24,7 @@ let db = Firestore.firestore()
 
 
 func SendUser(Firstname: String, LastName: String, PhoneNumber: String, Mail: String, Age: String){
-    let user = User(firstName: Firstname, lastName: LastName, phoneNumber: PhoneNumber, mail: Mail, age: Age)
+    let user = SendDataUser(firstName: Firstname, lastName: LastName, phoneNumber: PhoneNumber, mail: Mail, age: Age)
     do{
         try db.collection("User").document().setData(user.asDictionary())
     } catch let error{
