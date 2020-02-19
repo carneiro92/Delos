@@ -11,7 +11,13 @@ import SwiftUI
 struct UserDetaillsView: View {
     var item: UserData
     var body: some View {
-        Text(item.firstName)
+        HStack{
+            Text(item.firstName)
+            Text(item.lastName)
+            
+        }
+        
+        
     }
 }
 
