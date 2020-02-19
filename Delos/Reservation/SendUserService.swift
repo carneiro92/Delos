@@ -15,16 +15,16 @@ public struct User: Codable {
     let phoneNumber: String
     let mail: String
     let age: String
-    let id: Int
-
+    
     
 }
 
 
 let db = Firestore.firestore()
 
-func SendUser(Firstname: String, LastName: String, PhoneNumber: String, Mail: String, Age: String, ID: Int){
-    let user = User(firstName: Firstname, lastName: LastName, phoneNumber: PhoneNumber, mail: Mail, age: Age, id: ID)
+
+func SendUser(Firstname: String, LastName: String, PhoneNumber: String, Mail: String, Age: String){
+    let user = User(firstName: Firstname, lastName: LastName, phoneNumber: PhoneNumber, mail: Mail, age: Age)
     do{
         try db.collection("User").document().setData(user.asDictionary())
     } catch let error{

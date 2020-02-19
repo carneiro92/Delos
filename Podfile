@@ -6,8 +6,12 @@ target 'Delos' do
   use_frameworks!
 
   # Pods for Delos
-	pod 'Firebase/Auth'
-	pod 'Firebase/Firestore'
-	pod 'FirebaseFirestoreSwift'
+
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+ pod 'Firebase/Auth'
+ pod 'Firebase/Firestore'
+ pod 'FirebaseFirestoreSwift'
+
 
 end
