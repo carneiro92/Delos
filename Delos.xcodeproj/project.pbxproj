@@ -21,7 +21,7 @@
 		9B8B8A7223FBE2D50023A132 /* CodableAsDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */; };
 		9B8B8A7523FBF79A0023A132 /* GetUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7423FBF79A0023A132 /* GetUserService.swift */; };
 		9B8B8A7923FC34970023A132 /* ReservationList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7823FC34970023A132 /* ReservationList.swift */; };
-		9B8B8A7B23FD2F3F0023A132 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7A23FD2F3F0023A132 /* GoogleService-Info.plist */; };
+		9B8B8A7F23FD35F30023A132 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */; };
 		EE9705C423FACF3200049300 /* FavorisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9705C323FACF3200049300 /* FavorisView.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +43,7 @@
 		9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableAsDictionary.swift; sourceTree = "<group>"; };
 		9B8B8A7423FBF79A0023A132 /* GetUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserService.swift; sourceTree = "<group>"; };
 		9B8B8A7823FC34970023A132 /* ReservationList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationList.swift; sourceTree = "<group>"; };
-		9B8B8A7A23FD2F3F0023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE9705C323FACF3200049300 /* FavorisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisView.swift; sourceTree = "<group>"; };
 		FDF1E2EBEB9478839128E853 /* Pods-Delos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.release.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +81,7 @@
 		0DA0D94C23FAC66F003CE5CB /* Delos */ = {
 			isa = PBXGroup;
 			children = (
-				9B8B8A7A23FD2F3F0023A132 /* GoogleService-Info.plist */,
+				9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */,
 				9B8B8A7323FBEC240023A132 /* Reservation */,
 				9B8B8A7023FBE2AF0023A132 /* Extensions */,
 				EE9705C223FACCE000049300 /* Views */,
@@ -211,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA0D95A23FAC670003CE5CB /* LaunchScreen.storyboard in Resources */,
-				9B8B8A7B23FD2F3F0023A132 /* GoogleService-Info.plist in Resources */,
+				9B8B8A7F23FD35F30023A132 /* GoogleService-Info.plist in Resources */,
 				0DA0D95723FAC670003CE5CB /* Preview Assets.xcassets in Resources */,
 				0DA0D95423FAC670003CE5CB /* Assets.xcassets in Resources */,
 			);

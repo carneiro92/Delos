@@ -40,7 +40,9 @@ struct ReservationView: View {
                 self.mail = ""
                 self.age = ""
                 self.phoneNumber = ""
-            })
+            }).alert(isPresented: $showingAlert){
+                Alert(title: Text("Merci"), message: Text("Vous êtes maintenant inscris"))
+            }
             }
     }
 }
