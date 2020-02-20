@@ -9,17 +9,25 @@ import MapKit
 import SwiftUI
 
 struct MapView: UIViewRepresentable {
-    var userPosition: CLLocationCoordinate2D = CLLocationCoordinate2D()
-    @State var list: [StructSalle] = []
+    var userPosition: CLLocationCoordinate2D
+    var list: [StructSalle]?
+    
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView()
         map.showsUserLocation = true
         map.delegate = context.coordinator
-        for sale in list {
-            let landMark : LandMarks
-            landMark.coordinate.latitude = sale
-            map.
+        
+        guard let contenuPaquet = list else {
+            return map
         }
+        
+        for sale in contenuPaquet {
+            let landMark : LandMark
+            landMark.coordinate.latitude = sale
+            map.addAnnotation(<#T##annotation: MKAnnotation##MKAnnotation#>)
+        }
+        
+       
         return map
     }
     

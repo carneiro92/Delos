@@ -16,7 +16,6 @@ struct ContentView: View {
     var body: some View {
         return TabView {
             MapView(userPosition: userPosition, listeSalles: list)
-                .onAppear()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Accueil")
