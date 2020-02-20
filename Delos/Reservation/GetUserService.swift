@@ -10,13 +10,6 @@ import Foundation
 import Firebase
 
 
-
-var firstName: String = ""
-var lastName: String = ""
-var phoneNumber: String = ""
-var mail: String = ""
-var age: String = ""
-
 struct UserData:Identifiable, Decodable{
     var id: String = ""
     var firstName: String
@@ -40,6 +33,27 @@ func GetUserData(completion: @escaping ([UserData]) -> Void ){
     }
 }
 
+func GetOneUserData(completion: @escaping ([UserData]) -> Void){
+    docRefUser.whereField("id", isEqualTo: "1").getDocuments{(snapshot, _)in
+        let documents = snapshot!.documents
+        var userData: [UserData] = []
+        documents.forEach{document in
+            let infoUser: UserData = try! document.decoded()
+            userData.append(infoUser)
+        }
+    }
+}
+
+func GetOneSalle(completion: @escaping ([StructSalle]) -> Void){
+    docRefSalles.whereField("id", isEqualTo: "1").getDocuments{(snapshot, _)in
+        let documents = snapshot!.documents
+        var salleData: [StructSalle] = []
+        documents.forEach{document in
+            let infoSalle: StructSalle = try! document.decoded()
+            salleData.append(infoSalle)
+        }
+    }
+}
 
 
 
