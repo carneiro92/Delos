@@ -12,6 +12,7 @@ import Firebase
 
 
 struct ReservationView: View {
+    var salle: StructSalle
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -41,7 +42,7 @@ struct ReservationView: View {
             
             HStack{
                 VStack{
-                    Text("Text")
+                    Text("\(salle.description)")
                 }.padding()
                 Divider()
                 VStack{
@@ -58,12 +59,5 @@ struct ReservationView: View {
                     .foregroundColor(.white)
             }
         }
-    }
-}
-
-
-struct ReservationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReservationView()
     }
 }
