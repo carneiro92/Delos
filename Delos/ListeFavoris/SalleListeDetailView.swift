@@ -11,14 +11,29 @@ import SwiftUI
 struct SalleListeDetailView: View {
     
     var item: StructSalle
-       
-       var body: some View {
-           ScrollView {
-               VStack {
-                    Text(item.nom)
-                    Image(item.image).resizable().frame(width:120, height: 120)
-                    Text(item.description)
-                   }
-                   }
-               }
-           }
+    
+    var body: some View {
+        ScrollView {
+            VStack {
+                Text(item.nom)
+                Image(item.image).resizable().frame(width:120, height: 120)
+                Spacer()
+                Text(item.description)
+                Spacer()
+                Text("Adresse :" + item.adresse)
+                Text("         " + item.ville)
+                Spacer()
+                Button(action: {
+                    print(self.item.coordLat)
+                }) {
+                    Text("reservation")
+                        .foregroundColor(.blue)
+                }
+                .padding(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.blue, lineWidth: 2))
+            }
+        }
+    }
+}
