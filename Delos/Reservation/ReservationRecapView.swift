@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ReservationRecapView: View {
+    var salle: StructSalle
     @State var carteProprio: String = ""
     @State var carteNum: String = ""
     @State var carteExpDate: String = ""
@@ -20,42 +21,40 @@ struct ReservationRecapView: View {
     @State var pays: String = ""
     @State var isReserved: Bool = false
     var body: some View {
-        VStack{
-            Text("Paiement").font(.title)
-            Form{
-                Text("Infos Carte").font(.title)
-                TextField("Nom/Prénom propriétaire carte", text: $carteProprio)
-                TextField("Numéro de carte", text: $carteNum)
-                HStack{
-                    TextField("Date d'expiration", text: $carteExpDate)
-                    Divider()
-                    TextField("CCV", text: $carteCCV)
+            VStack{
+                Text("Paiement").font(.title)
+                Form{
+                    Section(header: Text("Infos Carte")){
+                        TextField("Nom/Prénom propriétaire carte", text: $carteProprio)
+                        TextField("Numéro de carte", text: $carteNum)
+                        HStack{
+                            TextField("Date d'expiration", text: $carteExpDate)
+                            Divider()
+                            TextField("CCV", text: $carteCCV)
+                        }
+                    }
+                    Section(header: Text("Adresse de facturation")){
+                        
+                        TextField("Adresse", text: $adresse)
+                        TextField("Ville", text: $ville)
+                        HStack{
+                            TextField("Région", text: $region)
+                            Divider()
+                            TextField("Code postal", text: $codePostal)
+                        }
+                        TextField("Pays", text: $pays)
+                    }
                 }
-            }.padding(.top, 50)
-            Form{
-                Text("Adresse de facturation").font(.title)
-                TextField("Adresse", text: $adresse)
-                TextField("Ville", text: $ville)
-                HStack{
-                    TextField("Région", text: $region)
-                    Divider()
-                    TextField("Code postal", text: $codePostal)
-                }
-                TextField("Pays", text: $pays)
-            }.padding(.top, -100)
-            Button("Payer",action: {
-                self.isReserved.toggle()
-                SendReservation(IsReserved: self.isReserved, CarteProprio: self.carteProprio, CarteNum: self.carteNum, Adresse: self.adresse, Ville: self.ville)
-            }).frame(width: 250, height: 50)
-                .background(Color.green)
-            .cornerRadius(20)
-                .foregroundColor(.white)
-        }
-    }
-}
 
-struct ReservationRecapView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReservationRecapView()
+                Button("Payer",action: {
+                    self.isReserved.toggle()
+                    SendReservation(IsReserved: self.isReserved, CarteProprio: self.carteProprio, CarteNum: self.carteNum, Adresse: self.adresse, Ville: self.ville)
+                }).foregroundColor(.blue)
+                .padding(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.blue, lineWidth: 2))
+                Spacer()
+            }.padding(.top, -50)
     }
 }

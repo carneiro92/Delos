@@ -24,10 +24,9 @@ struct ReservationView: View {
         VStack{
             Text("Réservation")
                 .font(.title)
-            Spacer()
             Divider()
             HStack{
-                Stepper("Nombre de musiciens:\t \(nombreMusiciens)", value: $nombreMusiciens, in: 0...15)
+                Stepper("Nombre de musiciens:\t \(nombreMusiciens)", value: $nombreMusiciens, in: 0...salle.musiciensMax)
             }.padding()
             Divider()
             HStack{
@@ -36,7 +35,6 @@ struct ReservationView: View {
                 }
                 
             }.padding()
-            Spacer()
             
             Text("Salle réserver pour \(nombreMusiciens) musiciens le \(dateResa, formatter: dateFormatter)")
             
@@ -46,18 +44,24 @@ struct ReservationView: View {
                 }.padding()
                 Divider()
                 VStack{
-                    Text("Text")
+                    Text("\(salle.prix)€").font(.title)
                     
                 }.padding()
-            }.frame(width:300, height: 200)
-                .border(Color.black)
-            HStack{
-                Button("Réserver", action: {
-                }).frame(width: 250, height: 50)
-                    .background(Color.green)
-                    .cornerRadius(20)
-                    .foregroundColor(.white)
             }
-        }
+            .frame(width:300, height: 200)
+            .border(Color.black)
+            
+            HStack{
+                NavigationLink(destination: ReservationRecapView(salle: self.salle)){
+                    Text("Réserver")
+                        .foregroundColor(.blue)
+                        .padding(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.blue, lineWidth: 2))
+                }
+            }
+        }.padding(.top, -50)
+        
     }
 }
