@@ -18,4 +18,7 @@ struct StructSalle: Identifiable, Decodable {
     var adresse: String
     var manger: Bool
     var fumer: Bool
+    var musiciensMax: Int
+    var coordLong: Double
+    var coordLat: Double
 }
