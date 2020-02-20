@@ -48,19 +48,18 @@ struct ReservationView: View {
                     Text("Text")
                     
                 }.padding()
-                }.frame(width:300, height: 200)
+            }.frame(width:300, height: 200)
                 .border(Color.black)
             HStack{
                 Button("Réserver", action: {
-                    
                 }).frame(width: 250, height: 50)
                     .background(Color.green)
-                .cornerRadius(20)
+                    .cornerRadius(20)
                     .foregroundColor(.white)
             }
         }
-        }
     }
+}
 
 
 struct ReservationView_Previews: PreviewProvider {

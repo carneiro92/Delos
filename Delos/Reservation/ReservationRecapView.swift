@@ -18,6 +18,7 @@ struct ReservationRecapView: View {
     @State var region: String = ""
     @State var codePostal: String = ""
     @State var pays: String = ""
+    @State var isReserved: Bool = false
     var body: some View {
         VStack{
             Text("Paiement").font(.title)
@@ -43,7 +44,8 @@ struct ReservationRecapView: View {
                 TextField("Pays", text: $pays)
             }.padding(.top, -100)
             Button("Payer",action: {
-                
+                self.isReserved.toggle()
+                SendReservation(IsReserved: self.isReserved, CarteProprio: self.carteProprio, CarteNum: self.carteNum, Adresse: self.adresse, Ville: self.ville)
             }).frame(width: 250, height: 50)
                 .background(Color.green)
             .cornerRadius(20)
