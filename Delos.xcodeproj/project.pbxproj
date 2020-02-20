@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */; };
 		0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D24E8E423FAD8CD00BEAC92 /* MapView.swift */; };
+		0D78732023FC30710058F058 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D78731F23FC30710058F058 /* Coordinator.swift */; };
+		0D78732323FC327D0058F058 /* LocationManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D78732223FC327D0058F058 /* LocationManagers.swift */; };
 		0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */; };
 		0DA0D95023FAC66F003CE5CB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0D94F23FAC66F003CE5CB /* SceneDelegate.swift */; };
 		0DA0D95223FAC66F003CE5CB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0D95123FAC66F003CE5CB /* ContentView.swift */; };
@@ -35,6 +37,8 @@
 /* Begin PBXFileReference section */
 		0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0D24E8E423FAD8CD00BEAC92 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		0D78731F23FC30710058F058 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0D78732223FC327D0058F058 /* LocationManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagers.swift; sourceTree = "<group>"; };
 		0DA0D94A23FAC66F003CE5CB /* Delos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Delos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA0D94F23FAC66F003CE5CB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D78731E23FC30410058F058 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				0D78731F23FC30710058F058 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		0D78732123FC32270058F058 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0D78732223FC327D0058F058 /* LocationManagers.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		0DA0D94123FAC66F003CE5CB = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +115,8 @@
 		0DA0D94C23FAC66F003CE5CB /* Delos */ = {
 			isa = PBXGroup;
 			children = (
+				0D78732123FC32270058F058 /* Managers */,
+				0D78731E23FC30410058F058 /* Coordinators */,
 				EEEDE8FA23FD388E00D87110 /* ListeFavoris */,
 				9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */,
 				9B8B8A7323FBEC240023A132 /* Reservation */,
@@ -295,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D78732323FC327D0058F058 /* LocationManagers.swift in Sources */,
 				0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */,
 				9B8B8A7523FBF79A0023A132 /* GetUserService.swift in Sources */,
 				EEEDE90223FD392B00D87110 /* Service.swift in Sources */,
@@ -311,6 +334,7 @@
 				0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */,
 				EE9705C423FACF3200049300 /* FavorisView.swift in Sources */,
 				0DA0D95223FAC66F003CE5CB /* ContentView.swift in Sources */,
+				0D78732023FC30710058F058 /* Coordinator.swift in Sources */,
 				EEEDE90523FD395F00D87110 /* StructSalle.swift in Sources */,
 				EEEDE90023FD390B00D87110 /* SalleListeElementView.swift in Sources */,
 			);

@@ -5,17 +5,29 @@
 //  Created by Carneiro Jorge on 17/02/2020.
 //  Copyright © 2020 Carneiro Jorge. All rights reserved.
 //
-
+import MapKit
 import SwiftUI
 
-struct MapView: View {
-    var body: some View {
-        Text("Hello, Map!")
+struct MapView: UIViewRepresentable {
+    var userPosition: CLLocationCoordinate2D = CLLocationCoordinate2D()
+    func makeUIView(context: Context) -> MKMapView {
+        let map = MKMapView()
+        map.showsUserLocation = true
+        map.delegate = context.coordinator
+        
+        return map
     }
-}
-
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView()
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+    
+    func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
+    }
+    
+    struct MapView_Previews: PreviewProvider {
+        static var previews: some View {
+            MapView()
+        }
     }
 }
