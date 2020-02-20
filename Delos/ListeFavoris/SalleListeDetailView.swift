@@ -23,16 +23,14 @@ struct SalleListeDetailView: View {
                 Text("Adresse :" + item.adresse)
                 Text("         " + item.ville)
                 Spacer()
-                Button(action: {
-                    ReservationView(salle: item)
-                }) {
+                NavigationLink(destination: ReservationView(salle: self.item)){
                     Text("reservation")
                         .foregroundColor(.blue)
+                        .padding(5)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.blue, lineWidth: 2))
                 }
-                .padding(5)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.blue, lineWidth: 2))
             }
         }
     }
