@@ -24,7 +24,7 @@ struct SalleListeDetailView: View {
                 Text("         " + item.ville)
                 Spacer()
                 Button(action: {
-                    print(self.item.coordLat)
+                    ReservationView(salle: item)
                 }) {
                     Text("reservation")
                         .foregroundColor(.blue)
