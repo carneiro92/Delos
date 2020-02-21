@@ -12,44 +12,52 @@ import Firebase
 
 
 struct ReservationView: View {
-    @State var firstName = ""
-    @State var lastName = ""
-    @State var age =  ""
-    @State var mail = ""
-    @State var phoneNumber = ""
-    @State var showingAlert = false
+    var salle: StructSalle
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        return formatter
+    }
+    @State var nombreMusiciens = 0
+    @State var dateResa = Date()
     var body: some View {
         VStack{
-//            Form{
-//                TextField("Nom", text: $lastName)
-////                TextField("Prénom", text: $firstName)
-////                TextField("Âge", text: $age)
-////                TextField("Mail", text: $mail)
-////                TextField("Numéro de téléphone", text: $phoneNumber)
-//            }
+            Text("Réservation")
+                .font(.title)
+            Spacer()
+            Divider()
+            HStack{
+                Stepper("Nombre de musiciens:\t \(nombreMusiciens)", value: $nombreMusiciens, in: 0...15)
+            }.padding()
+            Divider()
+            HStack{
+                DatePicker(selection: $dateResa,in: Date()..., displayedComponents: .date){
+                    Text("Date")
+                }
+                
+            }.padding()
+            Spacer()
             
-            Button("Print", action: {
-                GetUserData{user in}
-            })
+            Text("Salle réserver pour \(nombreMusiciens) musiciens le \(dateResa, formatter: dateFormatter)")
             
-            Button("Charger", action: {
-                self.showingAlert = true
-                SendUser(Firstname: self.firstName, LastName: self.lastName, PhoneNumber:self.phoneNumber, Mail: self.mail, Age: self.age)
-                self.lastName = ""
-                self.firstName = ""
-                self.mail = ""
-                self.age = ""
-                self.phoneNumber = ""
-            }).alert(isPresented: $showingAlert){
-                Alert(title: Text("Merci"), message: Text("Vous êtes maintenant inscris"))
+            HStack{
+                VStack{
+                    Text("\(salle.description)")
+                }.padding()
+                Divider()
+                VStack{
+                    Text("Text")
+                    
+                }.padding()
+            }.frame(width:300, height: 200)
+                .border(Color.black)
+            HStack{
+                Button("Réserver", action: {
+                }).frame(width: 250, height: 50)
+                    .background(Color.green)
+                    .cornerRadius(20)
+                    .foregroundColor(.white)
             }
         }
-    }
-}
-
-
-struct ReservationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ReservationView()
     }
 }
