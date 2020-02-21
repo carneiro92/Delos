@@ -14,7 +14,7 @@ struct ContentView: View {
     @State var userPosition: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 45, longitude: 4)
     private var locationManager = LocationManagers(userPosition: .constant(CLLocationCoordinate2D()))
     var body: some View {
-        return TabView {
+         TabView {
             MapView(userPosition: userPosition, listeSalles: list)
                 .tabItem {
                     Image(systemName: "house")
@@ -33,7 +33,7 @@ struct ContentView: View {
         }
         .font(.headline)
         .onAppear {
-            getSalles() { salles in
+            getSalles { salles in
                 self.list = salles
             }
         }

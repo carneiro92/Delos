@@ -9,25 +9,14 @@ import MapKit
 import SwiftUI
 
 struct MapView: UIViewRepresentable {
-    var userPosition: CLLocationCoordinate2D
-    var list: [StructSalle]?
+    var userPosition: CLLocationCoordinate2D?
+    var listeSalles: [StructSalle]
     
     func makeUIView(context: Context) -> MKMapView {
         let map = MKMapView()
         map.showsUserLocation = true
         map.delegate = context.coordinator
         
-        guard let contenuPaquet = list else {
-            return map
-        }
-        
-        for sale in contenuPaquet {
-            let landMark : LandMark
-            landMark.coordinate.latitude = sale
-            map.addAnnotation(<#T##annotation: MKAnnotation##MKAnnotation#>)
-        }
-        
-       
         return map
     }
     
@@ -35,12 +24,16 @@ struct MapView: UIViewRepresentable {
         Coordinator(self)
     }
     
-    func updateUIView(_ uiView: MKMapView, context: UIViewRepresentableContext<MapView>) {
+    func updateUIView(_ map: MKMapView, context: UIViewRepresentableContext<MapView>) {
+        for sale in listeSalles {
+            let landMark = LandMarks(title: sale.nom, subtitle: sale.ville, coordinate: CLLocationCoordinate2D(latitude: sale.coordLat, longitude: sale.coordLong), info: sale.description)
+            map.addAnnotation(landMark)
+        }
     }
     
     struct MapView_Previews: PreviewProvider {
         static var previews: some View {
-            MapView()
+            MapView(listeSalles: [])
         }
     }
 }
