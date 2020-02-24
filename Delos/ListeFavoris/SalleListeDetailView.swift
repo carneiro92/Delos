@@ -22,7 +22,7 @@ struct SalleListeDetailView: View {
                 Spacer()
                 Text("Adresse :" + item.adresse)
                 Text("         " + item.ville)
-                Spacer()
+                Spacer().frame(height: 150)
                 NavigationLink(destination: ReservationView(salle: self.item)){
                     Text("reservation")
                         .foregroundColor(.blue)
