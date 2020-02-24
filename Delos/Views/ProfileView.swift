@@ -9,35 +9,31 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State var listResa: [ReservationData] = []
-    
     var body: some View {
-        VStack {
-            HStack{
-                Image(systemName: "person.circle").resizable()
-            }.frame(width: 150, height: 150)
-            VStack{
-                Text("Nom")
-                Text("Prénom")
-                Text("Email")
-                Text("Tel")
-            }
-            HStack{
-                Text("Réservation a venir :").font(.title)
-            }
+        NavigationView{
             VStack {
-                List(listResa) { item in
-                    Text("Test")
+                HStack{
+                    Image(systemName: "person.circle").resizable()
+                }.frame(width: 150, height: 150)
+                VStack{
+                    Text("Damien")
+                    Text("Cesar")
+                    Text("0658131557")
+                    Text("damien.cesar.dc@gmail.com")
+                    
+                    
                 }
-            }.frame(height: 150)
+                Spacer()
+                HStack{
+                    Text("Réservation a venir :").font(.title)
+                }
+                Spacer()
+            }
+            
         }
-                .onAppear {
-                    GetReservationUser() { resas in
-                        self.listResa = resas
-                    }
-                }
     }
 }
+
 
 
 struct ProfileView_Previews: PreviewProvider {

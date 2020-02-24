@@ -29,9 +29,6 @@ struct ReservationData:Identifiable,Codable {
     let ville: String
 }
 
-
-
-
 let docRefUser = db.collection("User")
 let docRefResa = db.collection("Reservations")
 
@@ -84,7 +81,6 @@ func GetReservationUser(completion: @escaping ([ReservationData]) -> Void) {
         completion(reservationData)
     }
 }
-
 
 
 
