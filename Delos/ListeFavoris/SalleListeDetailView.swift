@@ -47,20 +47,17 @@ struct SalleListeDetailView: View {
             }
             
             Spacer()
-            HStack{
+            VStack{
                 Spacer()
                 NavigationLink(destination: ReservationView(salle: self.item)){
                     Text("Réservation")
                         .padding(5)
                         .foregroundColor(.white)
                         .background(Color.blue)
-                        
                         .cornerRadius(20)
                 }
-                Spacer().frame(width: 15)
             }
             Spacer()
-            
         }
     }
 }

@@ -18,7 +18,7 @@ struct ReservationView: View {
         formatter.dateStyle = .short
         return formatter
     }
-    @State var nombreMusiciens = 0
+    @State var nombreMusiciens = 1
     @State var dateResa = Date()
     var body: some View {
         VStack{
@@ -27,13 +27,14 @@ struct ReservationView: View {
                     .font(.title)
                 Divider()
                 HStack{
-                    Stepper("Nombre de musiciens:\t \(nombreMusiciens)", value: $nombreMusiciens, in: 0...salle.musiciensMax)
-                    }
+                    Stepper("Nombre de musiciens:\t \(nombreMusiciens)", value: $nombreMusiciens, in: 1...salle.musiciensMax)
+                }
+                .padding()
                 
-                    
+                
                 Divider()
                 HStack{
-                    DatePicker(selection: $dateResa,in: Date()..., displayedComponents: .date){
+                    DatePicker(selection: $dateResa,in: Date()...Date().addingTimeInterval(604800), displayedComponents: .date){
                         Text("Date")
                     }
                     
@@ -43,26 +44,23 @@ struct ReservationView: View {
                 
                 HStack{
                     VStack{
-                        Text("\(salle.description)")
+                        Text("\(salle.description)").font(.body).multilineTextAlignment(.leading)
+                            .frame(maxHeight: .infinity)
                     }.padding()
                     Divider()
                     VStack{
-                        Text("\(salle.prix)€").font(.title)
+                        Text("\(salle.prix)€").font(.body)
                         
                     }.padding()
                 }
                 .frame(width:300, height: 200)
-                .border(Color.black)
-                .background(Color.grisclair)
                 
                 HStack{
                     NavigationLink(destination: ReservationRecapView(salle: self.salle)){
-                        Text("Réserver")
-                            .foregroundColor(.blue)
-                            .padding(5)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.blue, lineWidth: 2))
+                        Text("Réserver").padding(5)
+                            .foregroundColor(.white)
+                            .background(Color.blue)
+                            .cornerRadius(20)
                     }
                 }
             }.padding(.top, -50)

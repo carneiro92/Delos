@@ -23,9 +23,29 @@ struct ProfileView: View {
                     
                     
                 }
-                Spacer()
-                HStack{
+                Spacer().frame(height:50)
+                VStack{
                     Text("Réservation a venir :").font(.title)
+                    
+                    List{
+                        HStack{
+                            Image(systemName: "calendar")
+                            Spacer()
+                            Text("Prochaine réservation le 3/3/20 à La Brestoise")}.padding()
+                            .font(.body)
+                        
+                        HStack{
+                        Image(systemName: "calendar")
+                        Spacer()
+                        Text("Prochaine réservation le 12/3/20 à La Brestoise")}.padding()
+                        .font(.body)
+                        
+                        HStack{
+                        Image(systemName: "calendar")
+                        Spacer()
+                        Text("Prochaine réservation le 25/3/20 à La Brestoise")}.padding()
+                        .font(.body)
+                    }
                 }
                 Spacer()
             }
