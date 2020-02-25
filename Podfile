@@ -9,9 +9,11 @@ target 'Delos' do
 
   # add pods for desired Firebase products
   # https://firebase.google.com/docs/ios/setup#available-pods
+ pod 'Firebase/Analytics'
  pod 'Firebase/Auth'
  pod 'Firebase/Firestore'
  pod 'FirebaseFirestoreSwift'
+
 
 
 end
