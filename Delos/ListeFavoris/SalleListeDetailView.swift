@@ -50,12 +50,12 @@ struct SalleListeDetailView: View {
             HStack{
                 Spacer()
                 NavigationLink(destination: ReservationView(salle: self.item)){
-                    Text("reservation")
-                        .foregroundColor(.blue)
+                    Text("Réservation")
                         .padding(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue, lineWidth: 2))
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        
+                        .cornerRadius(20)
                 }
                 Spacer().frame(width: 15)
             }

@@ -26,6 +26,7 @@
 		9B8B8A8123FD46890023A132 /* SnapshotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */; };
 		9B8B8A8723FE9E2F0023A132 /* ReservationRecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8623FE9E2F0023A132 /* ReservationRecapView.swift */; };
 		9B8B8A8C2403D0F60023A132 /* ProfileElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8B2403D0F60023A132 /* ProfileElementView.swift */; };
+		9B8B8A9124053CE00023A132 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A9024053CE00023A132 /* ColorExtension.swift */; };
 		EE9705C423FACF3200049300 /* FavorisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9705C323FACF3200049300 /* FavorisView.swift */; };
 		EEEDE8FE23FD38E900D87110 /* SalleListeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDE8FD23FD38E900D87110 /* SalleListeDetailView.swift */; };
 		EEEDE90023FD390B00D87110 /* SalleListeElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDE8FF23FD390B00D87110 /* SalleListeElementView.swift */; };
@@ -56,6 +57,7 @@
 		9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotExtensions.swift; sourceTree = "<group>"; };
 		9B8B8A8623FE9E2F0023A132 /* ReservationRecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationRecapView.swift; sourceTree = "<group>"; };
 		9B8B8A8B2403D0F60023A132 /* ProfileElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileElementView.swift; sourceTree = "<group>"; };
+		9B8B8A9024053CE00023A132 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		EE9705C323FACF3200049300 /* FavorisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisView.swift; sourceTree = "<group>"; };
 		EEEDE8FD23FD38E900D87110 /* SalleListeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalleListeDetailView.swift; sourceTree = "<group>"; };
 		EEEDE8FF23FD390B00D87110 /* SalleListeElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalleListeElementView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				9B8B8A7123FBE2D50023A132 /* CodableAsDictionary.swift */,
 				9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */,
+				9B8B8A9024053CE00023A132 /* ColorExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				9B8B8A8723FE9E2F0023A132 /* ReservationRecapView.swift in Sources */,
 				EEEDE90523FD395F00D87110 /* StructSalle.swift in Sources */,
 				EEEDE90023FD390B00D87110 /* SalleListeElementView.swift in Sources */,
+				9B8B8A9124053CE00023A132 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
