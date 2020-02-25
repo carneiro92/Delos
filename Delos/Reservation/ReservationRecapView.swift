@@ -20,41 +20,62 @@ struct ReservationRecapView: View {
     @State var codePostal: String = ""
     @State var pays: String = ""
     @State var isReserved: Bool = false
+    @State var isActive: Bool = false
+    @State var isShowed: Bool = false
+    @Binding var isShow: Bool
+
+    @Environment(\.presentationMode) var presentation
     var body: some View {
-            VStack{
-                Text("Paiement").font(.title)
-                Form{
-                    Section(header: Text("Infos Carte")){
-                        TextField("Nom/Prénom propriétaire carte", text: $carteProprio)
-                        TextField("Numéro de carte", text: $carteNum)
-                        HStack{
-                            TextField("Date d'expiration", text: $carteExpDate)
-                            Divider()
-                            TextField("CCV", text: $carteCCV)
-                        }
-                    }
-                    Section(header: Text("Adresse de facturation")){
-                        
-                        TextField("Adresse", text: $adresse)
-                        TextField("Ville", text: $ville)
-                        HStack{
-                            TextField("Région", text: $region)
-                            Divider()
-                            TextField("Code postal", text: $codePostal)
-                        }
-                        TextField("Pays", text: $pays)
+        VStack{
+            Text("Paiement").font(.title)
+            Form{
+                Section(header: Text("Infos Carte")){
+                    TextField("Nom/Prénom propriétaire carte", text: $carteProprio)
+                    TextField("Numéro de carte", text: $carteNum)
+                    HStack{
+                        TextField("Date d'expiration", text: $carteExpDate)
+                        Divider()
+                        TextField("CCV", text: $carteCCV)
                     }
                 }
-
-                Button("Payer",action: {
-                    self.isReserved.toggle()
-                    SendReservation(IsReserved: self.isReserved, CarteProprio: self.carteProprio, CarteNum: self.carteNum, Adresse: self.adresse, Ville: self.ville)
-                }).foregroundColor(.blue)
+                Section(header: Text("Adresse de facturation")){
+                    
+                    TextField("Adresse", text: $adresse)
+                    TextField("Ville", text: $ville)
+                    HStack{
+                        TextField("Région", text: $region)
+                        Divider()
+                        TextField("Code postal", text: $codePostal)
+                    }
+                    TextField("Pays", text: $pays)
+                }
+            }
+            
+            
+            NavigationLink(destination: MapView(), isActive: self.$isActive){
+                Text("")
+            }
+            
+            
+            Button("Payer",action: {
+                self.isReserved.toggle()
+                SendReservation(IsReserved: self.isReserved, CarteProprio: self.carteProprio, CarteNum: self.carteNum, Adresse: self.adresse, Ville: self.ville)
+                self.isShowed.toggle()
+                self.isShow.toggle()
+                self.presentation.wrappedValue.dismiss()
+            }).foregroundColor(.blue)
                 .padding(5)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
                         .stroke(Color.blue, lineWidth: 2))
-                Spacer()
-            }.padding(.top, -50)
+                .alert(isPresented: $isShowed, content:{
+                    Alert(title: Text("Merci"), message: Text("Votre réservation a bien été prise en charge."), dismissButton: .default(Text("Compris")){
+                        
+                        })
+                })
+            Spacer()
+            
+        }.padding(.top, -50)
     }
 }
+

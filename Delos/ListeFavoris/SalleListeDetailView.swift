@@ -11,6 +11,7 @@ import SwiftUI
 struct SalleListeDetailView: View {
     
     var item: StructSalle
+    @State var isShow: Bool = false
     
     var body: some View {
         VStack{
@@ -49,13 +50,21 @@ struct SalleListeDetailView: View {
             Spacer()
             VStack{
                 Spacer()
-                NavigationLink(destination: ReservationView(salle: self.item)){
+                Button(action:{
+                    self.isShow.toggle()
+                }){
                     Text("Réservation")
-                        .padding(5)
-                        .foregroundColor(.white)
-                        .background(Color.blue)
-                        .cornerRadius(20)
+                }.sheet(isPresented: $isShow){
+                    ReservationView(salle: self.item, isShow: self.$isShow )
                 }
+                .padding(5)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(20)
+                //                NavigationLink(destination: ReservationView(salle: self.item)){
+                //                    Text("Réservation")
+                //
+                //                }
             }
             Spacer()
         }

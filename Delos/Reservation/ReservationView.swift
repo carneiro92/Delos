@@ -13,6 +13,7 @@ import Firebase
 
 struct ReservationView: View {
     var salle: StructSalle
+    @Binding var isShow: Bool
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -21,6 +22,7 @@ struct ReservationView: View {
     @State var nombreMusiciens = 1
     @State var dateResa = Date()
     var body: some View {
+        NavigationView{
         VStack{
             VStack{
                 Text("Réservation")
@@ -56,7 +58,7 @@ struct ReservationView: View {
                 .frame(width:300, height: 200)
                 
                 HStack{
-                    NavigationLink(destination: ReservationRecapView(salle: self.salle)){
+                    NavigationLink(destination: ReservationRecapView(salle: self.salle, isShow: self.$isShow)){
                         Text("Réserver").padding(5)
                             .foregroundColor(.white)
                             .background(Color.blue)
@@ -67,4 +69,5 @@ struct ReservationView: View {
             
         }
     }
+}
 }
