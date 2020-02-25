@@ -13,8 +13,9 @@ struct FavorisView: View {
     
     var body: some View {
         NavigationView {
-            List(list) { item in NavigationLink(destination: SalleListeDetailView(item: item)){
-                SalleListeElementView(item: item)
+            List(list) { item in
+                NavigationLink(destination: SalleListeDetailView(item: item)) {
+                    SalleListeElementView(item: item)
                 }
             }
             .navigationBarTitle("Mes favoris")
