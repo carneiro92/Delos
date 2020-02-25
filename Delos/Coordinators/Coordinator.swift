@@ -40,10 +40,9 @@ final class Coordinator : NSObject , MKMapViewDelegate {
             //4
             let marker = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             marker.glyphImage = UIImage(systemName: "music.house.fill")
-            marker.canShowCallout = true
             annotationView = marker
             // 5
-            let btn = UIButton(type: .detailDisclosure)
+            let btn = UIButton(type: .close)
             annotationView?.rightCalloutAccessoryView = btn
         } else {
             // 6
@@ -52,5 +51,25 @@ final class Coordinator : NSObject , MKMapViewDelegate {
 
         return annotationView
     }
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let landMark = view.annotation as? LandMarks else { return }
+                
+        control.listeSalles.forEach { sale in
+            if sale.id == landMark.id {
+                withAnimation {
+                    control.selectedPlace = sale
+                    control.modalPresent = true
+                }
+            }
+        }
+ 
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        control.selectedPlace = nil
+        control.modalPresent = false
+    }
+    
+    
     
 }

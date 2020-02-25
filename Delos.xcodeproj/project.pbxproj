@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */; };
 		0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D24E8E423FAD8CD00BEAC92 /* MapView.swift */; };
 		0D674D2B23FE8A8A0091683F /* LandMarksManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D674D2A23FE8A8A0091683F /* LandMarksManager.swift */; };
+		0D739B422405378300FA53BA /* MapDetailsVue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D739B412405378300FA53BA /* MapDetailsVue.swift */; };
+		0D739B4524053D0E00FA53BA /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 0D739B4424053D0E00FA53BA /* PartialSheet */; };
 		0D78732023FC30710058F058 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D78731F23FC30710058F058 /* Coordinator.swift */; };
 		0D78732323FC327D0058F058 /* LocationManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D78732223FC327D0058F058 /* LocationManagers.swift */; };
 		0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0D94D23FAC66F003CE5CB /* AppDelegate.swift */; };
@@ -25,8 +27,6 @@
 		9B8B8A7F23FD35F30023A132 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */; };
 		9B8B8A8123FD46890023A132 /* SnapshotExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */; };
 		9B8B8A8723FE9E2F0023A132 /* ReservationRecapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8623FE9E2F0023A132 /* ReservationRecapView.swift */; };
-		9B8B8A8323FD50EB0023A132 /* ListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8223FD50EB0023A132 /* ListDataModel.swift */; };
-		9B8B8A8523FD87890023A132 /* UserDetaillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B8A8423FD87890023A132 /* UserDetaillsView.swift */; };
 		ABF14DACD4158D2DF993F585 /* Pods_Delos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EBFB9CF88820454E7556F21 /* Pods_Delos.framework */; };
 		EE9705C423FACF3200049300 /* FavorisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9705C323FACF3200049300 /* FavorisView.swift */; };
 		EEEDE8FE23FD38E900D87110 /* SalleListeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEDE8FD23FD38E900D87110 /* SalleListeDetailView.swift */; };
@@ -39,6 +39,7 @@
 		0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0D24E8E423FAD8CD00BEAC92 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		0D674D2A23FE8A8A0091683F /* LandMarksManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMarksManager.swift; sourceTree = "<group>"; };
+		0D739B412405378300FA53BA /* MapDetailsVue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailsVue.swift; sourceTree = "<group>"; };
 		0D78731F23FC30710058F058 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0D78732223FC327D0058F058 /* LocationManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManagers.swift; sourceTree = "<group>"; };
 		0D79EF5A23FFDB4500891672 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,10 +59,8 @@
 		9B8B8A7423FBF79A0023A132 /* GetUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserService.swift; sourceTree = "<group>"; };
 		9B8B8A7E23FD35F30023A132 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9B8B8A8023FD46890023A132 /* SnapshotExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotExtensions.swift; sourceTree = "<group>"; };
-		9B8B8A8223FD50EB0023A132 /* ListDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDataModel.swift; sourceTree = "<group>"; };
-		9B8B8A8423FD87890023A132 /* UserDetaillsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetaillsView.swift; sourceTree = "<group>"; };
-		E611FC6711D9B492AC606FE6 /* Pods-Delos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.release.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.release.xcconfig"; sourceTree = "<group>"; };
 		9B8B8A8623FE9E2F0023A132 /* ReservationRecapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationRecapView.swift; sourceTree = "<group>"; };
+		E611FC6711D9B492AC606FE6 /* Pods-Delos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Delos.release.xcconfig"; path = "Target Support Files/Pods-Delos/Pods-Delos.release.xcconfig"; sourceTree = "<group>"; };
 		EE9705C323FACF3200049300 /* FavorisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorisView.swift; sourceTree = "<group>"; };
 		EEEDE8FD23FD38E900D87110 /* SalleListeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalleListeDetailView.swift; sourceTree = "<group>"; };
 		EEEDE8FF23FD390B00D87110 /* SalleListeElementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalleListeElementView.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D739B4524053D0E00FA53BA /* PartialSheet in Frameworks */,
 				ABF14DACD4158D2DF993F585 /* Pods_Delos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +189,7 @@
 				0D24E8E223FAD8B700BEAC92 /* ProfileView.swift */,
 				0D24E8E423FAD8CD00BEAC92 /* MapView.swift */,
 				0DA0D94F23FAC66F003CE5CB /* SceneDelegate.swift */,
+				0D739B412405378300FA53BA /* MapDetailsVue.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,6 +223,9 @@
 			dependencies = (
 			);
 			name = Delos;
+			packageProductDependencies = (
+				0D739B4424053D0E00FA53BA /* PartialSheet */,
+			);
 			productName = Delos;
 			productReference = 0DA0D94A23FAC66F003CE5CB /* Delos.app */;
 			productType = "com.apple.product-type.application";
@@ -250,6 +254,9 @@
 				Base,
 			);
 			mainGroup = 0DA0D94123FAC66F003CE5CB;
+			packageReferences = (
+				0D739B4324053D0E00FA53BA /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = 0DA0D94B23FAC66F003CE5CB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -324,7 +331,6 @@
 				0DA0D94E23FAC66F003CE5CB /* AppDelegate.swift in Sources */,
 				9B8B8A7523FBF79A0023A132 /* GetUserService.swift in Sources */,
 				EEEDE90223FD392B00D87110 /* Service.swift in Sources */,
-				9B8B8A7923FC34970023A132 /* ReservationList.swift in Sources */,
 				0D674D2B23FE8A8A0091683F /* LandMarksManager.swift in Sources */,
 				9B8B8A7223FBE2D50023A132 /* CodableAsDictionary.swift in Sources */,
 				0D24E8E523FAD8CD00BEAC92 /* MapView.swift in Sources */,
@@ -335,6 +341,7 @@
 				0DA0D95023FAC66F003CE5CB /* SceneDelegate.swift in Sources */,
 				0D24E8E323FAD8B700BEAC92 /* ProfileView.swift in Sources */,
 				EE9705C423FACF3200049300 /* FavorisView.swift in Sources */,
+				0D739B422405378300FA53BA /* MapDetailsVue.swift in Sources */,
 				0DA0D95223FAC66F003CE5CB /* ContentView.swift in Sources */,
 				0D78732023FC30710058F058 /* Coordinator.swift in Sources */,
 				9B8B8A8723FE9E2F0023A132 /* ReservationRecapView.swift in Sources */,
@@ -535,6 +542,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0D739B4324053D0E00FA53BA /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0D739B4424053D0E00FA53BA /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D739B4324053D0E00FA53BA /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DA0D94223FAC66F003CE5CB /* Project object */;
 }

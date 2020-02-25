@@ -7,15 +7,12 @@
 //
 
 import SwiftUI
-import MapKit
+
 
 struct ContentView: View {
-    @State var list: [StructSalle] = []
-    @State var userPosition: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 45, longitude: 4)
-    private var locationManager = LocationManagers(userPosition: .constant(CLLocationCoordinate2D()))
     var body: some View {
-         TabView {
-            MapView(userPosition: userPosition, listeSalles: list)
+        TabView {
+            MapDetailsVue()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Accueil")
@@ -31,17 +28,12 @@ struct ContentView: View {
                     Text("Profile")
             }
         }
-        .font(.headline)
-        .onAppear {
-            getSalles { salles in
-                self.list = salles
-            }
-        }
+        
     }
-    
-    struct ContentView_Previews: PreviewProvider {
-        static var previews: some View {
-            ContentView()
-        }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
