@@ -13,15 +13,41 @@ struct SalleListeDetailView: View {
     var item: StructSalle
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Text(item.nom)
-                Image(item.image).resizable().frame(width:120, height: 120)
-                Spacer()
-                Text(item.description)
-                Spacer()
-                Text("Adresse :" + item.adresse)
-                Text("         " + item.ville)
+        VStack{
+            Text(item.nom)
+                .font(.headline).bold()
+            
+            Image(item.image)
+                .resizable()
+                .frame(height: 200)
+            
+            VStack(alignment: .leading){
+                HStack{
+                    Text("\(item.prix)€").padding()
+                    Spacer()
+                    Text("*****")
+                    Spacer()
+                    Text("à 2km").padding()
+                }
+                
+                HStack{
+                    Spacer().frame(width: 15)
+                    VStack(alignment: .leading){
+                        
+                        Text(item.description)
+                        Spacer().frame(height: 15)
+                        Text("Adresse :")
+                        Text(item.adresse)
+                            .font(.headline).bold()
+                        
+                        Text(item.ville)
+                            .font(.headline).bold()
+                    }
+                }
+            }
+            
+            Spacer()
+            HStack{
                 Spacer()
                 NavigationLink(destination: ReservationView(salle: self.item)){
                     Text("reservation")
@@ -31,7 +57,10 @@ struct SalleListeDetailView: View {
                             RoundedRectangle(cornerRadius: 20)
                                 .stroke(Color.blue, lineWidth: 2))
                 }
+                Spacer().frame(width: 15)
             }
+            Spacer()
+            
         }
     }
 }
