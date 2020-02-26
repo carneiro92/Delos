@@ -27,8 +27,7 @@ struct ContentView: View {
                     Image(systemName: "person.circle")
                     Text("Profile")
             }
-        }
-        
+        }        
     }
 }
 

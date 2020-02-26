@@ -29,6 +29,7 @@ struct MapDetailsVue: View {
             }
             
         }
+        
         .partialSheet(presented: $modalPresented) {
             VStack {
                 Group {
