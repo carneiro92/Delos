@@ -50,9 +50,6 @@ struct ReservationRecapView: View {
                     TextField("Pays", text: $pays)
                 }
             }
-            
-                        
-            
             Button("Payer",action: {
                 self.isReserved.toggle()
                 SendReservation(IsReserved: self.isReserved, CarteProprio: self.carteProprio, CarteNum: self.carteNum, Adresse: self.adresse, Ville: self.ville)
