@@ -13,51 +13,61 @@ import Firebase
 
 struct ReservationView: View {
     var salle: StructSalle
+    @Binding var isShow: Bool
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         return formatter
     }
-    @State var nombreMusiciens = 0
+    @State var nombreMusiciens = 1
     @State var dateResa = Date()
     var body: some View {
+        NavigationView{
         VStack{
-            Text("Réservation")
-                .font(.title)
-            Spacer()
-            Divider()
-            HStack{
-                Stepper("Nombre de musiciens:\t \(nombreMusiciens)", value: $nombreMusiciens, in: 0...15)
-            }.padding()
-            Divider()
-            HStack{
-                DatePicker(selection: $dateResa,in: Date()..., displayedComponents: .date){
-                    Text("Date")
-                }
-                
-            }.padding()
-            Spacer()
-            
-            Text("Salle réserver pour \(nombreMusiciens) musiciens le \(dateResa, formatter: dateFormatter)")
-            
-            HStack{
-                VStack{
-                    Text("\(salle.description)")
-                }.padding()
+            VStack{
+                Text("Réservation")
+                    .font(.title)
                 Divider()
-                VStack{
-                    Text("Text")
+                HStack{
+                    Stepper("Nombre de musiciens:\t \(nombreMusiciens)", value: $nombreMusiciens, in: 1...salle.musiciensMax)
+                }
+                .padding()
+                
+                
+                Divider()
+                HStack{
+                    DatePicker(selection: $dateResa,in: Date()...Date().addingTimeInterval(604800), displayedComponents: .date){
+                        Text("Date")
+                    }
                     
                 }.padding()
-            }.frame(width:300, height: 200)
-                .border(Color.black)
-            HStack{
-                Button("Réserver", action: {
-                }).frame(width: 250, height: 50)
-                    .background(Color.green)
-                    .cornerRadius(20)
-                    .foregroundColor(.white)
-            }
+                
+                Text("Salle réserver pour \(nombreMusiciens) musiciens le \(dateResa, formatter: dateFormatter)")
+                
+                HStack{
+                    VStack{
+                        Text("\(salle.description)").font(.body).multilineTextAlignment(.leading)
+                            .frame(maxHeight: .infinity)
+                    }.padding()
+                    Divider()
+                    VStack{
+                        Text("\(salle.prix)€").font(.body)
+                        
+                    }.padding()
+                }
+                .frame(width:300, height: 200)
+                
+                HStack{
+                    NavigationLink(destination: ReservationRecapView(salle: self.salle, isShow: self.$isShow)){
+                        Text("Réserver").padding(5)
+                            .foregroundColor(.white)
+                            .background(Color.blue)
+                            .cornerRadius(20)
+                    }
+                }
+            }.padding(.top, -50)
+            
         }
     }
+}
 }

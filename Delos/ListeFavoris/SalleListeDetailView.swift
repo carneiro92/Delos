@@ -11,6 +11,7 @@ import SwiftUI
 struct SalleListeDetailView: View {
     
     var item: StructSalle
+    @State var isShow: Bool = false
     
     var body: some View {
         VStack{
@@ -47,20 +48,25 @@ struct SalleListeDetailView: View {
             }
             
             Spacer()
-            HStack{
+            VStack{
                 Spacer()
-                NavigationLink(destination: ReservationView(salle: self.item)){
-                    Text("reservation")
-                        .foregroundColor(.blue)
-                        .padding(5)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 20)
-                                .stroke(Color.blue, lineWidth: 2))
+                Button(action:{
+                    self.isShow.toggle()
+                }){
+                    Text("Réservation")
+                }.sheet(isPresented: $isShow){
+                    ReservationView(salle: self.item, isShow: self.$isShow )
                 }
-                Spacer().frame(width: 15)
+                .padding(5)
+                .foregroundColor(.white)
+                .background(Color.blue)
+                .cornerRadius(20)
+                //                NavigationLink(destination: ReservationView(salle: self.item)){
+                //                    Text("Réservation")
+                //
+                //                }
             }
             Spacer()
-            
         }
     }
 }
