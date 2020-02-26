@@ -51,7 +51,11 @@ struct ReservationRecapView: View {
                 }
             }
             
-                        
+            
+            NavigationLink(destination: MapView(), isActive: self.$isActive){
+                Text("")
+            }
+            
             
             Button("Payer",action: {
                 self.isReserved.toggle()
@@ -59,14 +63,16 @@ struct ReservationRecapView: View {
                 self.isShowed.toggle()
                 self.isShow.toggle()
                 self.presentation.wrappedValue.dismiss()
-            }).padding(5)
-            .foregroundColor(.white)
-            .background(Color.blue)
-            .cornerRadius(20)
-                .alert(isPresented: $isShowed) {
-                    Alert(title: Text("Merci"), message: Text("Votre réservation a bien été prise en charge."), dismissButton: .default(Text("Compris")))
-                }
-            
+            }).foregroundColor(.blue)
+                .padding(5)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(Color.blue, lineWidth: 2))
+                .alert(isPresented: $isShowed, content:{
+                    Alert(title: Text("Merci"), message: Text("Votre réservation a bien été prise en charge."), dismissButton: .default(Text("Compris")){
+                        
+                        })
+                })
             Spacer()
             
         }.padding(.top, -50)
