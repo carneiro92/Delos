@@ -28,3 +28,23 @@ func getSalles(completion: @escaping ([StructSalle]) -> Void) {
         }
     }
 }
+
+let docRefSallesFav = db.collection("Salles")
+
+func getSallesFav(completion: @escaping ([StructSalle]) -> Void) {
+    docRefSallesFav.whereField("favoris", isEqualTo: true).getDocuments { (snapshot, err) in
+        if let err = err {
+            print("Error getting documents: \(err)")
+            completion([])
+        } else{
+            let documents = snapshot!.documents
+            
+            var listeSalles: [StructSalle] = []
+            documents.forEach { document in
+                let salle: StructSalle = try! document.decoded()
+                listeSalles.append(salle)
+            }
+            completion(listeSalles)
+        }
+    }
+}

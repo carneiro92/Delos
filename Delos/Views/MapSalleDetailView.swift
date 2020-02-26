@@ -8,15 +8,13 @@
 
 import SwiftUI
 
-struct SalleListeDetailView: View {
+struct MapSalleDetailView: View {
     
     var item: StructSalle
     @State var isShow: Bool = false
     
     var body: some View {
         VStack{
-            Text(item.nom)
-                .font(.headline).bold()
             
             Image(item.image)
                 .resizable()
@@ -46,9 +44,9 @@ struct SalleListeDetailView: View {
                     }
                 }
             }
-            Spacer()
+            
             VStack{
-                Spacer()
+                Spacer().frame(height: 25)
                 Button(action:{
                     self.isShow.toggle()
                 }){
@@ -60,6 +58,10 @@ struct SalleListeDetailView: View {
                 .foregroundColor(.white)
                 .background(Color.blue)
                 .cornerRadius(20)
+                //                NavigationLink(destination: ReservationView(salle: self.item)){
+                //                    Text("Réservation")
+                //
+                //                }
             }
             Spacer()
         }

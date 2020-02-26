@@ -20,7 +20,7 @@ struct FavorisView: View {
             }
             .navigationBarTitle("Mes favoris")
             .onAppear {
-                getSalles() { salles in
+                getSallesFav() { salles in
                     self.list = salles
                 }
             }
