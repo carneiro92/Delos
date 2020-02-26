@@ -48,6 +48,7 @@ final class Coordinator : NSObject , MKMapViewDelegate {
             // 6
             annotationView?.annotation = annotation
         }
+        annotationView?.displayPriority = .required
 
         return annotationView
     }
