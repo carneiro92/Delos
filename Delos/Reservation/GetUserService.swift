@@ -20,7 +20,20 @@ struct UserData:Identifiable, Decodable{
 }
 
 
+struct ReservationData:Identifiable,Codable {
+    var id  = UUID()
+    let isReserved: Bool
+    let carteProprio: String
+    let carteNum: String
+    let adresse: String
+    let ville: String
+}
+
 let docRefUser = db.collection("User")
+let docRefResa = db.collection("Reservations")
+
+
+
 func GetUserData(completion: @escaping ([UserData]) -> Void ){
     docRefUser.getDocuments{(snapshot, _)in
         let documents = snapshot!.documents
@@ -41,6 +54,7 @@ func GetOneUserData(completion: @escaping ([UserData]) -> Void){
             let infoUser: UserData = try! document.decoded()
             userData.append(infoUser)
         }
+        completion(userData)
     }
 }
 
@@ -52,9 +66,21 @@ func GetOneSalle(completion: @escaping ([StructSalle]) -> Void){
             let infoSalle: StructSalle = try! document.decoded()
             salleData.append(infoSalle)
         }
+        completion(salleData)
     }
 }
 
+func GetReservationUser(completion: @escaping ([ReservationData]) -> Void) {
+    docRefResa.whereField("id", isEqualTo: "1").getDocuments{(snapshot, _)in
+        let documents = snapshot!.documents
+        var reservationData: [ReservationData] = []
+        documents.forEach{document in
+            let infoReservation: ReservationData = try! document.decoded()
+            reservationData.append(infoReservation)
+        }
+        completion(reservationData)
+    }
+}
 
 
 
