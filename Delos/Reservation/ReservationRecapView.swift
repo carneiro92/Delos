@@ -23,7 +23,7 @@ struct ReservationRecapView: View {
     @State var isActive: Bool = false
     @State var isShowed: Bool = false
     @Binding var isShow: Bool
-
+    
     @Environment(\.presentationMode) var presentation
     var body: some View {
         VStack{
