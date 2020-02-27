@@ -21,4 +21,5 @@ struct StructSalle: Identifiable, Decodable {
     var musiciensMax: Int
     var coordLong: Double
     var coordLat: Double
+    var favoris: Bool
 }

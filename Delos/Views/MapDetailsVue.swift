@@ -36,6 +36,7 @@ struct MapDetailsVue: View {
                     HStack{
                         Spacer()
                         Text(self.selectedPlace?.nom ?? "")
+                        .font(.headline).bold()
                             .font(.subheadline)
                         Spacer()
                         Button(action: {self.showingPlaceDetails.toggle()}) {
@@ -51,7 +52,7 @@ struct MapDetailsVue: View {
                 .frame(height: 50)
                 if self.showingPlaceDetails && self.selectedPlace != nil {
                     
-                    SalleListeDetailView(item: self.selectedPlace!)
+                    MapSalleDetailView(item: self.selectedPlace!)
                 }
             }
         }

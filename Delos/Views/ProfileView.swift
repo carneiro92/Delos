@@ -13,8 +13,9 @@ struct ProfileView: View {
         NavigationView{
             VStack {
                 HStack{
-                    Image(systemName: "person.circle").resizable()
+                    Image("profile").resizable()
                 }.frame(width: 150, height: 150)
+                .cornerRadius(20)
                 VStack{
                     Text("Damien")
                     Text("Cesar")
