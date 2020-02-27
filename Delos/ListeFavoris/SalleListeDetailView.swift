@@ -28,7 +28,13 @@ struct SalleListeDetailView: View {
                 HStack{
                     Text("\(item.prix)€").padding()
                     Spacer()
-                    Text("*****")
+                    HStack{
+                        Image(systemName: "star.fill")
+                        Image(systemName: "star.fill")
+                        Image(systemName: "star.fill")
+                        Image(systemName: "star")
+                        
+                    }
                     Spacer()
                     Text("à 2km").padding()
                 }

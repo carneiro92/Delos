@@ -17,7 +17,7 @@ final class Coordinator : NSObject , MKMapViewDelegate {
     }
     var posMap : Bool = false
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        let span = MKCoordinateSpan(latitudeDelta: 0.04, longitudeDelta: 0.04)
+        let span = MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3)
        let region =  MKCoordinateRegion(center: userLocation.coordinate, span: span)
         if posMap == false {
             mapView.setRegion(region, animated: true)

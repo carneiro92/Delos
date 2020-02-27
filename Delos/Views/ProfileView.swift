@@ -17,10 +17,10 @@ struct ProfileView: View {
                 }.frame(width: 150, height: 150)
                 .cornerRadius(20)
                 VStack{
-                    Text("Damien")
-                    Text("Cesar")
-                    Text("0658131557")
-                    Text("damien.cesar.dc@gmail.com")
+                    Text("Jean")
+                    Text("Marc")
+                    Text("06354231")
+                    Text("jean.marc@gmail.com")
                     
                     
                 }
