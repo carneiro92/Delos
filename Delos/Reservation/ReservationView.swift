@@ -59,7 +59,9 @@ struct ReservationView: View {
                 
                 HStack{
                     NavigationLink(destination: ReservationRecapView(salle: self.salle, isShow: self.$isShow)){
-                        Text("Réserver").padding(5)
+                        Text("Réserver")
+                            .frame(width: 150, height: 30)
+                            .padding(5)
                             .foregroundColor(.white)
                             .background(Color.blue)
                             .cornerRadius(20)

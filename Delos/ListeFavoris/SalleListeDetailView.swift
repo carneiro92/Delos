@@ -21,6 +21,8 @@ struct SalleListeDetailView: View {
             Image(item.image)
                 .resizable()
                 .frame(height: 200)
+                .padding(3)
+                .border(Color.black, width: 3)
             
             VStack(alignment: .leading){
                 HStack{
@@ -33,23 +35,32 @@ struct SalleListeDetailView: View {
                 
                 HStack{
                     Spacer().frame(width: 15)
-                    VStack(alignment: .leading){
-                        
-                        Text(item.description)
-                        Spacer().frame(height: 15)
-                        Text("Adresse :")
-                        Text(item.adresse)
-                            .font(.headline).bold()
-                        
-                        Text(item.ville)
-                            .font(.headline).bold()
+                    VStack{
+                        ScrollView{
+                            Text(item.description).frame(maxHeight: .infinity).padding(.trailing).multilineTextAlignment(.leading)
+                            Spacer().frame(height: 15)
+                            VStack{
+                                HStack{
+                                    Text("Adresse :").multilineTextAlignment(.leading)
+                                    
+                                    Spacer()
+                                }
+                                HStack{
+                                    Text(item.adresse)
+                                        .font(.headline).bold()
+                                    Text(item.ville)
+                                        .font(.headline).bold()
+                                    Spacer()
+                                }
+                            }
+                        }
                     }
                 }
             }
             
-            Spacer()
+            //            Spacer()
             VStack{
-                Spacer()
+                //                Spacer()
                 Button(action:{
                     self.isShow.toggle()
                 }){
@@ -57,6 +68,7 @@ struct SalleListeDetailView: View {
                 }.sheet(isPresented: $isShow){
                     ReservationView(salle: self.item, isShow: self.$isShow )
                 }
+                .frame(width: 150, height: 30)
                 .padding(5)
                 .foregroundColor(.white)
                 .background(Color.blue)
@@ -66,7 +78,7 @@ struct SalleListeDetailView: View {
                 //
                 //                }
             }
-            Spacer()
+            Spacer().frame(height: 30)
         }
     }
 }
