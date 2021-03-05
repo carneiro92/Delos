@@ -26,10 +26,8 @@ struct MapDetailsVue: View {
                     getSalles { salles in
                         self.list = salles
                     }
-            }
-            
+                }
         }
-        
         .partialSheet(presented: $modalPresented) {
             VStack {
                 Group {
