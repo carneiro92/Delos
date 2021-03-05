@@ -27,25 +27,20 @@ final class Coordinator : NSObject , MKMapViewDelegate {
         
     }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        // 1
+        
         guard annotation is LandMarks else { return nil }
 
-        // 2
         let identifier = "LandMarks"
 
-        // 3
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
 
         if annotationView == nil {
-            //4
             let marker = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             marker.glyphImage = UIImage(systemName: "music.house.fill")
             annotationView = marker
-            // 5
             let btn = UIButton(type: .close)
             annotationView?.rightCalloutAccessoryView = btn
         } else {
-            // 6
             annotationView?.annotation = annotation
         }
         annotationView?.displayPriority = .required
